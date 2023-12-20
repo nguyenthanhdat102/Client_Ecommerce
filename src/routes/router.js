@@ -17,6 +17,7 @@ import StatisticalPage from "../admin/page/statistical/StatisticalPage";
 import SiteLayout from "../site/layout/SiteLayout";
 import ErrorPageSite from "../site/page/error/ErrorSitePage";
 import Home from "../site/page/Home";
+import UserPage from "../admin/page/user/UserPage";
 
 const router = createBrowserRouter([
    {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
          {
             path: "statistical",
             element: <StatisticalPage />,
+         },
+         {
+            path: "user",
+            element: <UserPage />,
          },
       ],
    },

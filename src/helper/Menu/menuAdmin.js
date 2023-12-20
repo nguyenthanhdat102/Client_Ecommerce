@@ -10,7 +10,7 @@ const menu = [
          {
             title: "Thành viên",
             icon: "ti ti-user",
-            link: "admin/user",
+            link: "/admin/user",
          },
       ],
       status: true,

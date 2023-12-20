@@ -27,15 +27,23 @@ const SidebarNav = ({ onChangeMenu }) => {
                   <ul id="sidebarnav">
                      {menu.map((menuItem, index) => {
                         return (
-                           <li className="nav-small-cap" key={index}>
-                              <i className="ti ti-dots nav-small-cap-icon fs-4" />
-                              <span className="hide-menu">
-                                 {menuItem.title}
-                              </span>
+                           <>
+                              <li
+                                 className="nav-small-cap"
+                                 key={`${index}-${menuItem.title}`}
+                              >
+                                 <i className="ti ti-dots nav-small-cap-icon fs-4" />
+                                 <span className="hide-menu">
+                                    {menuItem.title}
+                                 </span>
+                              </li>
                               {menuItem.children.length > 0 &&
                                  menuItem.children.map((childItem, i) => {
                                     return (
-                                       <li className="sidebar-item" key={i}>
+                                       <li
+                                          className="sidebar-item"
+                                          key={`${index}-${i}-${childItem.title}`}
+                                       >
                                           <NavLink
                                              className="sidebar-link"
                                              to={childItem.link}
@@ -51,7 +59,7 @@ const SidebarNav = ({ onChangeMenu }) => {
                                        </li>
                                     );
                                  })}
-                           </li>
+                           </>
                         );
                      })}
                   </ul>

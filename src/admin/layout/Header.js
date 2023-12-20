@@ -21,7 +21,7 @@ const Header = ({ onChangeMenu }) => {
                   <li className="nav-item">
                      <a
                         className="nav-link nav-icon-hover"
-                        href="javascript:void(0)"
+                        href=""
                      >
                         <i className="ti ti-bell-ringing" />
                         <div className="notification bg-primary rounded-circle" />
@@ -36,7 +36,7 @@ const Header = ({ onChangeMenu }) => {
                      <li className="nav-item dropdown">
                         <a
                            className="nav-link nav-icon-hover"
-                           href="javascript:void(0)"
+                           href=""
                            id="drop2"
                            data-bs-toggle="dropdown"
                            aria-expanded="false"
@@ -55,21 +55,21 @@ const Header = ({ onChangeMenu }) => {
                         >
                            <div className="message-body">
                               <a
-                                 href="javascript:void(0)"
+                                 href=""
                                  className="d-flex align-items-center gap-2 dropdown-item"
                               >
                                  <i className="ti ti-user fs-6" />
                                  <p className="mb-0 fs-3">My Profile</p>
                               </a>
                               <a
-                                 href="javascript:void(0)"
+                                 href=""
                                  className="d-flex align-items-center gap-2 dropdown-item"
                               >
                                  <i className="ti ti-mail fs-6" />
                                  <p className="mb-0 fs-3">My Account</p>
                               </a>
                               <a
-                                 href="javascript:void(0)"
+                                 href=""
                                  className="d-flex align-items-center gap-2 dropdown-item"
                               >
                                  <i className="ti ti-list-check fs-6" />
