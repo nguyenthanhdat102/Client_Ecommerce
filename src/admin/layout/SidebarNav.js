@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
 import LogoUrl from "../assets/images/logos/dark-logo.svg";
-import menu from "../../helper/Menu/menuAdmin";
+import menu from "../../helper/menuAdmin";
 
 const SidebarNav = ({ onChangeMenu }) => {
    return (

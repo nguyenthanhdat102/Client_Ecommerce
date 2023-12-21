@@ -1,13 +1,19 @@
 import React from "react";
 
+import TitlePage from "../../components/TitlePage";
+import Table from "../../components/Table";
+import Pagination from "../../components/Pagination";
+
 const BrandPage = () => {
    return (
-      <div className="card">
-         <div className="card-body">
-            <h5 className="card-title fw-semibold mb-4">BrandPage</h5>
-            <p className="mb-0">This is a BrandPage </p>
-         </div>
-      </div>
+      <>
+         <TitlePage
+            title={"Thương hiệu"}
+            placeholder={"Tìm kiếm tên thương hiệu"}
+         />
+         <Table />
+         <Pagination />
+      </>
    );
 };
 

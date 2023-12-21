@@ -1,13 +1,19 @@
 import React from "react";
 
+import TitlePage from "../../components/TitlePage";
+import Table from "../../components/Table";
+import Pagination from "../../components/Pagination";
+
 const CategoryPage = () => {
    return (
-      <div className="card">
-         <div className="card-body">
-            <h5 className="card-title fw-semibold mb-4">CategoryPage</h5>
-            <p className="mb-0">This is a CategoryPage</p>
-         </div>
-      </div>
+      <>
+         <TitlePage
+            title={"Danh mục sản phẩm"}
+            placeholder={"Tìm kiếm danh mục"}
+         />
+         <Table />
+         <Pagination />
+      </>
    );
 };
 
