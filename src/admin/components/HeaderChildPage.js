@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from "react";
+import exportExcel from "../../helper/exportExcel";
 
-const TitlePage = ({ title, placeholder }) => {
+const HeaderChildPage = ({
+   title,
+   placeholder,
+   showModal,
+   apiSearch,
+   setData,
+   data,
+   fileName,
+}) => {
    const [searchString, setSearchString] = useState("");
-
-   const searchHandle = () => {
-      console.log(searchString);
-   };
 
    useEffect(() => {
       document.title = title;
-   }, []);
+   }, [title]);
+
+   const searchHandle = () => {
+      apiSearch({
+         params: {
+            q: searchString,
+         },
+      }).then(({ data }) => setData(data.data));
+   };
 
    return (
       <div className="card w-100">
@@ -41,10 +54,18 @@ const TitlePage = ({ title, placeholder }) => {
                   </div>
                </div>
                <div className="col-lg-4 d-flex justify-content-end">
-                  <button type="button" className="btn btn-primary m-1 ">
+                  <button
+                     type="button"
+                     className="btn btn-primary m-1 "
+                     onClick={() => showModal(true)}
+                  >
                      Thêm mới
                   </button>
-                  <button type="button" className="btn btn-secondary m-1">
+                  <button
+                     type="button"
+                     className="btn btn-secondary m-1"
+                     onClick={() => exportExcel(data, fileName)}
+                  >
                      Xuất excel
                   </button>
                </div>
@@ -54,4 +75,4 @@ const TitlePage = ({ title, placeholder }) => {
    );
 };
 
-export default TitlePage;
+export default HeaderChildPage;

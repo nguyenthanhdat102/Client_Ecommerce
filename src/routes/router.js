@@ -18,6 +18,9 @@ import SiteLayout from "../site/layout/SiteLayout";
 import ErrorPageSite from "../site/page/error/ErrorSitePage";
 import Home from "../site/page/Home";
 import UserPage from "../admin/page/user/UserPage";
+import BrandDetailPage from "../admin/page/brand/BrandDetailPage";
+import SamplePage from "../admin/page/sample-page/SamplePage";
+import CategoryDetailPage from "../admin/page/category/CategoryDetailPage";
 
 const router = createBrowserRouter([
    {
@@ -47,6 +50,10 @@ const router = createBrowserRouter([
             element: <DashBoard />,
          },
          {
+            path: "test",
+            element: <SamplePage />,
+         },
+         {
             path: "product",
             element: <ProductPage />,
          },
@@ -55,8 +62,16 @@ const router = createBrowserRouter([
             element: <CategoryPage />,
          },
          {
+            path: "category/:slug/:id",
+            element: <CategoryDetailPage />,
+         },
+         {
             path: "brand",
             element: <BrandPage />,
+         },
+         {
+            path: "brand/:slug/:id",
+            element: <BrandDetailPage />,
          },
          {
             path: "product/comment",

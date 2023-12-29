@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
 
 import SidebarNav from "./SidebarNav";
 import Header from "./Header";
@@ -29,7 +30,7 @@ const AdminLayout = () => {
             data-header-position="fixed"
          >
             {/* Sidebar Start */}
-            <SidebarNav onChangeMenu={handleActiveMenu}/>
+            <SidebarNav onChangeMenu={handleActiveMenu} />
             {/*  Sidebar End */}
             {/*  Main wrapper */}
             <div className="body-wrapper">

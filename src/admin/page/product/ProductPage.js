@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // ======================================
 import Pagination from "../../components/Pagination";
-import TitlePage from "../../components/TitlePage";
-import Table from "../../components/Table";
+import TitlePage from "../../components/HeaderChildPage";
+
+import { getProducts } from "../../../service/api/productApi";
 
 const ProductPage = () => {
+   // const [products, setProducts] = useState([]);
+   // useEffect(() => {
+   //    getProducts({}).then((x) => console.log(x))
+   // }, [])
    return (
       <>
          <TitlePage
             title={"Sản phẩm"}
             placeholder={"Tìm kiếm tên sản sản phẩm"}
          />
-         <Table />
          <Pagination />
       </>
    );

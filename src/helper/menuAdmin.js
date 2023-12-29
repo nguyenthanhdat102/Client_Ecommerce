@@ -1,5 +1,15 @@
 const menu = [
    {
+      title: "Thử nghiệm",
+      children: [
+         {
+            title: "Test",
+            icon: 'ti ti-brand-redux',
+            link: '/admin/test'
+         }
+      ]
+   },
+   {
       title: "Bảng điều khiển",
       children: [
          {
